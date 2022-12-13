@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css'
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 const pageTitle = "About Me";
 
@@ -29,10 +31,7 @@ const textCase = "capitalize";
 		<title>Astro | {pageTitle}</title>
 	</head>
 	<body>
-        <a href="/" class="nav-items">Home</a>
-        <a href="/about" class="nav-items">About Me</a>
-        <a href="/blog" class="nav-items">Blog</a>
-
+        <Header />
         <h1>{pageTitle}</h1>
         <h2>I am Sonat and my new Astro site!</h2>
       
@@ -56,18 +55,12 @@ const textCase = "capitalize";
         {happy && <p>I am happy to be learning Astro!</p>}
         {finished && <p>I finished this tutorial!</p>}
         {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+        
+        <Footer/ >
     </body>
 </html>
 
 <style define:vars={{skillColor, fontWeight, textCase}}>
-    .nav-items{
-        padding: 0.75rem 1.5rem;
-        margin: 5px;
-        color: white;
-        background-color: cadetblue;
-        border-radius: 8px;
-        text-decoration: none;
-    }
     h1{
         color: purple;
         font-size: 4rem;
