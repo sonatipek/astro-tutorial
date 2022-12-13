@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css'
+
 const pageTitle = "About Me";
 
 const identity = {
@@ -12,6 +14,10 @@ const skills = ["HTML", "CSS", "JavaScript", "Vue", "Astro", "Python", "Node JS"
 const happy = true;
 const finished = false;
 const goal = 3;
+
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "capitalize";
 ---
 
 <html lang="en">
@@ -44,7 +50,7 @@ const goal = 3;
         </ul>
         <p>My skills are:</p>
         <ul>
-            {skills.map((skill) => <li>{skill}</li>)}
+            {skills.map((skill) => <li class="skill">{skill}</li>)}
         </ul>
 
         {happy && <p>I am happy to be learning Astro!</p>}
@@ -53,7 +59,7 @@ const goal = 3;
     </body>
 </html>
 
-<style>
+<style define:vars={{skillColor, fontWeight, textCase}}>
     .nav-items{
         padding: 0.75rem 1.5rem;
         margin: 5px;
@@ -61,5 +67,14 @@ const goal = 3;
         background-color: cadetblue;
         border-radius: 8px;
         text-decoration: none;
+    }
+    h1{
+        color: purple;
+        font-size: 4rem;
+    }
+    .skill{
+        color: var(--skillColor);
+        font-weight: var(--skillColor);
+        text-transform: var(--textCase);
     }
 </style>
