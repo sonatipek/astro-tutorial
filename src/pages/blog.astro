@@ -1,0 +1,38 @@
+---
+const pageTitle = "My Astro Learning Blog"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro | {pageTitle}</title>
+	</head>
+	<body>
+        <a href="/" class="nav-items">Home</a>
+        <a href="/about" class="nav-items">About Me</a>
+        <a href="/blog" class="nav-items">Blog</a>    
+
+        <h1>{pageTitle}</h1>
+        <p>This is where I will post about my journey learning Astro.</p>
+
+        <ul>
+            <li><a href="/posts/post-1/">Post 1</a></li>
+            <li><a href="/posts/post-2/">Post 2</a></li>
+            <li><a href="/posts/post-3/">Post 3</a></li>
+        </ul>
+    </body>
+</html>
+
+<style>
+    .nav-items{
+        padding: 0.75rem 1.5rem;
+        margin: 5px;
+        color: white;
+        background-color: cadetblue;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+</style>
